@@ -33,8 +33,9 @@
 .advantages__card {
   display: flex;
   flex-direction: column;
+
   &--active {
-  background: @bg-blue;
+    background: @bg-blue;
   }
 }
 
@@ -43,19 +44,24 @@
     display: flex;
     flex-wrap: wrap;
   }
+
   .advantages__item {
     display: flex;
     flex-wrap: wrap;
   }
+
   .advantages__item:nth-of-type(2) .advantages__card {
     order: 2;
   }
+
   .advantages__item:nth-of-type(2) .advantages__img {
     order: 1;
   }
+
   .advantages__card {
     width: 256px;
   }
+
   .advantages__img {
     width: 512px;
   }
