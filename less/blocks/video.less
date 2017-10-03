@@ -1,4 +1,11 @@
 .video {
-  background-image: url("../../img/video-mobile@1x.jpg");
-  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+@media (min-width: @desktop-width) {
+  .video {
+    padding: 0 200px;
+  }
 }
