@@ -5,3 +5,48 @@
   font-weight: 400;
   color: #333333;
 }
+
+.media__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.media__header {
+  text-align: center;
+}
+
+.media__title {
+  margin: 0;
+  padding: 0;
+}
+
+.media__intro {
+  margin: 0;
+  padding: 0;
+}
+
+.media__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .media__wrapper {
+    padding: 0 60px;
+  }
+
+  .media__list {
+    justify-content: flex-start;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .media__wrapper {
+    padding: 0;
+  }
+}

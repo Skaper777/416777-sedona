@@ -4,3 +4,30 @@
   font-weight: bold;
   color: black;
 }
+
+.places input {
+  position: absolute;
+}
+
+@media (min-width: @tablet-width) {
+  .places label {
+    width: 230px;
+    outline: 1px solid;
+  }
+
+  .places label:nth-of-type(1) {
+    order: 1;
+  }
+
+  .places label:nth-of-type(2) {
+    order: 3;
+  }
+
+  .places label:nth-of-type(3) {
+    order: 2;
+  }
+
+  .places label:nth-of-type(4) {
+    order: 4;
+  }
+}

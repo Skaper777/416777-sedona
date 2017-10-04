@@ -1,8 +1,45 @@
 .page-footer {
-  padding: 0 20px;
+  width: 100%;
   background-color: white;
   font-size: 14px;
   line-height: 26px;
   font-weight: 400;
   color: black;
+}
+
+.page-footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 160px;
+  margin: 0 auto;
+  text-align: center;
+  outline: 1px solid;
+}
+
+.page-footer__title {
+  margin: 0;
+  padding: 0;
+  outline: 1px solid green;
+}
+
+.page-footer__list {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer__wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 650px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer__wrapper {
+    width: 1024px;
+  }
 }
