@@ -1,25 +1,37 @@
 .main-header {
   width: 100%;
   margin: 0 auto;
-  outline: 1px solid black;
   background-color: white;
 }
 
 .main-header__logo {
-  height: 84px;
+  z-index: 10;
+  height: 55px;
+  margin-right: 66px;
 }
 
-.main-header__text {
-  min-height: 200px;
+.main-header__picture {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  min-height: 390px;
   width: 100%;
   background-image: url("../../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: 50% 100%;
 }
 
+.main-header__words {
+  position: absolute;
+  top: 23px;
+}
+
 @media (min-width: @tablet-width) {
   .main-header__logo {
     order: 2;
+    margin: 0 auto;
   }
 }
 
