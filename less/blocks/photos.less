@@ -3,32 +3,107 @@
 }
 
 .photos__item {
+  position: relative;
   display: flex;
   flex-direction: column;
+  padding-top: 22px;
+  padding-bottom: 17px;
+}
+
+.photos__item::before {
+  content: "";
+  width: 320px;
+  height: 1px;
+  background-color: #eeeeee;
+  position: absolute;
+  bottom: 0;
+  left: -20px;
 }
 
 .photos__text {
   display: flex;
   flex-wrap: wrap;
+  padding-top: 2px;
 }
 
 .photos__label {
   display: flex;
   flex-direction: column;
   width: 100%;
+  margin: 0;
+  margin-top: 7px;
+}
+
+.photos__author {
+  text-transform: none;
+}
+
+.photos__likes {
+  position: relative;
+  padding-top: 8px;
+  padding-left: 37px;
+  text-decoration: none;
+  color: black;
+}
+
+.photos__likes svg {
+  position: absolute;
+  left: 0;
+  top: 6px;
+  opacity: 0.3;
 }
 
 @media (min-width: @tablet-width) {
   .photos__item:first-child {
     width: 100%;
+
+    img {
+      height: 400px;
+      width: 100%;
+    }
+
+    .photos__likes {
+      margin-top: 13px;
+      padding-right: 21px;
+      padding-left: 31px;
+    }
+  }
+
+  .photos__item:nth-child(2) {
+    .photos__label {
+      width: 60%;
+    }
+  }
+
+  .photos__item:nth-child(3) {
+    .photos__likes {
+      padding-right: 37px;
+    }
+  }
+
+  .photos__item img {
+    width: 100%;
+    height: 267px;
   }
 
   .photos__item {
+    padding-top: 0;
     width: 324px;
+  }
+
+  .photos__likes {
+    margin-top: 11px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .photos__item::before {
+    display: none;
   }
 
   .photos__label {
     width: 50%;
+    padding-left: 20px;
   }
 
   .photos__text {
@@ -39,5 +114,33 @@
 @media (min-width: @desktop-width) {
   .photos__item {
     width: 400px;
+    color: white;
+    padding-bottom: 0;
+  }
+
+  .photos__item:first-child {
+    img {
+      height: 400px;
+    }
+
+    .photos__text {
+      margin-top: -87px;
+    }
+  }
+
+  .photos__text {
+    position: relative;
+    margin-top: -86px;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding-top: 8px;
+    padding-bottom: 17px;
+  }
+
+  .photos__likes {
+    color: white;
+
+    svg {
+      fill: white;
+    }
   }
 }

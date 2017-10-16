@@ -1,11 +1,11 @@
 .main-nav {
   width: 100%;
   margin: 0 auto;
-  outline: 1px solid black;
   background-color: white;
 }
 
 .main-nav__list {
+  display: non;
   width: 100%;
   list-style: none;
   margin: 0;
@@ -15,8 +15,6 @@
   font-size: 18px;
   font-weight: bold;
   line-height: 40px;
-  color: white;
-  outline: 2px solid green;
   text-align: center;
 }
 
@@ -24,7 +22,43 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
+}
+
+.main-nav__link {
+  display: block;
+  width: 100%;
+  padding: 7.1px 0;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+}
+
+.main-nav__link:hover {
+  background-color: @btn-hover;
+}
+
+.main-nav__link:active {
+  background-color: @btn-down;
+  color: @btn-content-down;
+}
+
+.main-nav__toggle {
   position: relative;
+  width: 23px;
+  height: 22px;
+  margin-top: 17px;
+  margin-bottom: 16px;
+  margin-right: 20px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.main-nav__toggle svg {
+  position: absolute;
+  fill: @bg-blue;
+  top: 0;
+  left: 0;
 }
 
 @media (min-width: @tablet-width) {
@@ -34,11 +68,31 @@
   }
 
   .main-nav__list {
-    width: 330px;
     background-color: white;
   }
 
+  .main-nav__link {
+    color: black;
+    padding-top: 14px;
+    font-size: 14px;
+    line-height: 26px;
+
+    &--active {
+      color: @menu-active;
+    }
+  }
+
+  .main-nav__link:hover {
+    background-color: white;
+    color: @main-menu-hover;
+  }
+
+  .main-nav__link:active {
+    color: @main-menu-down;
+  }
+
   .main-nav__wrapper {
+    flex-wrap: nowrap;
     justify-content: center;
     width: 768px;
     margin: 0 auto;
@@ -51,10 +105,6 @@
 
 @media (min-width: @desktop-width) {
   .main-nav__wrapper {
-    width: 1100px;
-  }
-
-  .main-nav__list {
-    width: 500px;
+    width: 1200px;
   }
 }

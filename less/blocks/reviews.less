@@ -8,17 +8,44 @@
   color: #5d5d5d;
 }
 
+.reviews__wrapper {
+  width: 280px;
+  margin: 0 auto;
+}
+
 .reviews__form {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  outline: 1px solid red;
 }
 
 .reviews__header {
+  position: relative;
+  padding-top: 38px;
+  padding-bottom: 4px;
   width: 100%;
   text-align: center;
   order: -10;
+}
+
+.reviews__header::after {
+  content: "";
+  width: 320px;
+  height: 1px;
+  background-color: #eeeeee;
+  position: absolute;
+  bottom: 0;
+  right: -20px;
+}
+
+.reviews__title {
+  font-size: 18px;
+  line-height: 26px;
+  color: black;
+}
+
+.reviews__intro {
+  padding-top: 12px;
 }
 
 .reviews__impression,
@@ -33,7 +60,6 @@
   padding: 0;
   margin: 0;
   border: none;
-  outline: 1px solid green;
 }
 
 .reviews h3 {
@@ -41,6 +67,30 @@
   padding: 0;
   margin: 0;
   text-align: center;
+}
+
+.reviews__button {
+  display: block;
+  width: 100%;
+  padding: 16px;
+  margin-bottom: 37px;
+  border: none;
+  font-family: "PTSans", "Arial", sans-serif;
+  font-size: 21px;
+  text-transform: uppercase;
+}
+
+.reviews__button:hover {
+  background-color: @btn-hover;
+}
+
+.reviews__button:active {
+  background-color: @btn-down;
+  color: @btn-content-down;
+}
+
+.reviews__required {
+  display: none;
 }
 
 @media (min-width: @tablet-width) {
@@ -53,14 +103,32 @@
     justify-content: space-between;
   }
 
+  .reviews__header {
+    padding-top: 73px;
+    padding-bottom: 43px;
+  }
+
+  .reviews__title {
+    font-size: 30px;
+  }
+
+  .reviews__intro {
+    padding: 0 105px;
+    padding-top: 12px;
+  }
+
+  .reviews__header::after {
+    display: none;
+  }
+
   .reviews__impression {
-    width: 324px;
+    width: 50%;
     padding: 0;
     order: -2;
   }
 
   .reviews__introduce {
-    width: 324px;
+    width: 50%;
     order: -1;
   }
 
@@ -76,14 +144,33 @@
   }
 
   .reviews__emotions {
-
     width: 100%;
+  }
+
+  .reviews__button {
+    width: 323px;
+    margin-bottom: 97px;
+  }
+
+  .reviews__required {
+    display: block;
+    padding-top: 5px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .reviews__wrapper {
-    width: 1000px;
+    width: 960px;
+  }
+
+  .reviews__header {
+    padding-top: 121px;
+    padding-bottom: 28px;
+  }
+
+  .reviews__intro {
+    padding: 0 260px;
+    padding-top: 12px;
   }
 
   .reviews__impression {
@@ -97,5 +184,10 @@
   .reviews__contacts {
     flex-direction: row;
     justify-content: space-between;
+  }
+
+  .reviews__button {
+    width: 50%;
+    margin-bottom: 102px;
   }
 }

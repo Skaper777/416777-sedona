@@ -1,3 +1,45 @@
 .social {
+  display: flex;
+  justify-content: space-around;
   background-color: white;
+}
+
+.social__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 46px;
+  height: 48px;
+  font-size: 0;
+  background-color: @bg-blue;
+}
+
+.social__link:hover {
+  background-color: @btn-hover;
+}
+
+.social__link:active {
+  background-color: @btn-down;
+}
+
+.social__link svg {
+  fill: white;
+}
+
+.social__link:active svg {
+  fill: #88b6d1;
+}
+
+@media (min-width: @tablet-width) {
+  .social {
+    width: 150px;
+    justify-content: space-between;
+    padding-right: 5px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .social {
+    padding-right: 85px;
+  }
 }

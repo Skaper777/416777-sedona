@@ -1,0 +1,117 @@
+.controls__range {
+  position: relative;
+  margin-top: -45px;
+  padding: 21px 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.controls__stripe {
+  width: 235px;
+  height: 3px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+}
+
+.controls__ball {
+  position: absolute;
+  top: 18px;
+  left: 58px;
+  width: 9px;
+  height: 9px;
+  background-color: white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.controls__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 280px;
+  padding: 22px 0;
+  background-color: @bg-input;
+
+  svg {
+    fill: @controls-btn;
+  }
+
+  svg:hover {
+    fill: @controls-hover;
+  }
+
+  svg:active {
+    opacity: 0.3;
+  }
+}
+
+.controls__replay {
+  margin-left: 25px;
+}
+
+.controls__subtitles {
+  margin-left: 132px;
+}
+
+.controls__fullscreen {
+  margin-left: 33px;
+}
+
+@media (min-width: @tablet-width) {
+  .controls__buttons {
+    position: relative;
+    width: 648px;
+    padding: 36px 0;
+    margin-top: -92px;
+    background-color: rgba(0, 0, 0, 0.6);
+
+    svg {
+      fill: white;
+    }
+  }
+
+  .controls__replay {
+    margin-left: 36px;
+  }
+
+  .controls__subtitles {
+    margin-left: 470px;
+  }
+
+  .controls__range {
+    position: absolute;
+    top: -23px;
+    left: 90px;
+    background-color: transparent;
+    z-index: 1;
+  }
+
+  .controls__stripe {
+    width: 389px;
+  }
+
+  .controls__ball {
+    left: 30%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .controls__buttons {
+    width: 800px;
+  }
+
+  .controls__subtitles {
+    margin-left: 620px;
+  }
+
+  .controls__stripe {
+    width: 540px;
+  }
+
+  .controls__range {
+    left: 11%;
+  }
+
+  .controls__ball {
+    left: 22%;
+  }
+}

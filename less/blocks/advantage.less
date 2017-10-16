@@ -1,18 +1,48 @@
 .advantage {
-  background-color: white;
+  padding-bottom: 0;
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
   color: #5d5d5d;
 }
 
+.advantage br {
+  display: none;
+}
+
 .advantage__list {
+  background-color: white;
+  padding: 0;
+  padding-left: 30px;
+  margin-top: 36px;
+  margin-bottom: 38px;
   list-style: none;
   text-align: left;
 }
 
 .advantage__title {
-  margin: 0;
+  margin-top: 28px;
+  margin-bottom: 13.4px;
+  color: black;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.advantage__item {
+  position: relative;
+  padding: 0 40px;
+}
+
+.advantage__item svg {
+  position: absolute;
+  top: -11px;
+  left: -8px;
+  fill: @bg-blue;
+}
+
+.advantage__item:last-child svg {
+  top: -6px;
+  left: -11px;
 }
 
 .advantage__description {
@@ -22,5 +52,85 @@
 @media (min-width: @tablet-width) {
   .advantage__list {
     display: flex;
+    text-align: center;
+    padding: 0;
+    margin-top: 60px;
+    margin-bottom: 62px;
+  }
+
+  .advantage__item:first-child {
+    padding: 0 27px;
+
+    .advantage__description {
+      padding: 0 20px;
+    }
+  }
+
+  .advantage__item:nth-child(2) {
+    order: 2;
+    padding: 0 45px;
+  }
+
+  .advantage__item:last-child {
+    order: 1;
+    padding: 0 25px;
+
+    .advantage__description {
+      padding: 0 30px;
+    }
+  }
+
+  .advantage__title {
+    margin-top: 98px;
+    margin-bottom: 22px;
+    font-size: 21px;
+  }
+
+  .advantage__item svg {
+    top: 10%;
+    left: 42%;
+  }
+
+  .advantage__item:last-child svg {
+    top: 10%;
+    left: 42%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .advantage__list {
+    margin-bottom: 82px;
+  }
+
+  .advantage br {
+    display: inline;
+  }
+
+  .advantage__item {
+    min-width: 400px;
+  }
+
+  .advantage__item:first-child {
+    padding: 0;
+
+    .advantage__description {
+      padding: 0 70px;
+    }
+  }
+
+  .advantage__item:nth-child(2) {
+    padding: 0;
+
+    .advantage__description {
+      padding: 0;
+    }
+  }
+
+  .advantage__item:last-child {
+    padding: 0;
+
+    .advantage__description {
+      padding: 0 50px;
+    }
   }
 }

@@ -1,0 +1,72 @@
+.modal-failure {
+  display: none;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 320px;
+  padding-bottom: 35px;
+  text-align: center;
+  background-color: white;
+  box-shadow: 0 10px 25px 0;
+  z-index: 100;
+}
+
+.modal-failure__title {
+  padding-top: 22px;
+  text-transform: uppercase;
+  font-size: 18px;
+  color: black;
+}
+
+.modal-failure__text {
+  padding: 0 45px;
+  padding-top: 9px;
+  padding-bottom: 10px;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.modal-failure__button {
+  text-transform: uppercase;
+  width: 180px;
+  padding: 18px 0;
+  background-color: @bg-blue;
+  border: none;
+  font-family: "PTSans", "Arial", sans-serif;
+  font-size: 18px;
+  color: white;
+}
+
+.modal-failure__button:hover {
+  background-color: @btn-hover;
+}
+
+.modal-failure__button:active {
+  background-color: @btn-down;
+  color: @btn-content-down;
+}
+
+@media (min-width: @tablet-width) {
+  .modal-failure {
+    width: 400px;
+    padding-bottom: 50px;
+  }
+
+  .modal-failure__title {
+    padding: 0 75px;
+    margin-top: 55px;
+    margin-bottom: 12px;
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .modal-failure__text {
+    margin-top: 0;
+    margin-bottom: 25px;
+  }
+
+  .modal-failure__button {
+    width: 272px;
+  }
+}
