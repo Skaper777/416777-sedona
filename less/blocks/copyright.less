@@ -11,7 +11,26 @@
   padding-right: 8px;
 }
 
+.copyright__link:hover {
+  fill: @bg-blue;
+}
+
+.copyright__link:active {
+  fill: #b2b2b2;
+}
+
 .copyright__text {
   padding-top: 3px;
   padding-left: 7px;
+}
+
+@media (min-width: @tablet-width) {
+  .copyright {
+    justify-content: flex-end;
+    padding-top: 8px;
+  }
+
+  .copyright__text {
+    padding-right: 13px;
+  }
 }

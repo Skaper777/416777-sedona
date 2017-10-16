@@ -1,3 +1,73 @@
+.emotions {
+  padding-top: 18px;
+  padding-bottom: 52px;
+}
+
+.emotions__legend {
+  font-size: 18px;
+  color: black;
+}
+
 .emotions textarea {
-  width: 100%;
+  margin-top: 19px;
+  padding: 16px 20px;
+  width: 238px;
+  min-height: 127px;
+  background-color: @bg-input;
+  border: none;
+  resize: none;
+}
+
+.emotions textarea::-webkit-input-placeholder {
+  color: black;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+@media (min-width: @tablet-width) {
+  .emotions {
+    position: relative;
+    padding-bottom: 59px;
+  }
+
+  .emotions::before,
+  .emotions::after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 28px;
+    width: 123px;
+    height: 1px;
+    background-color: @bg-gray;
+  }
+
+  .emotions::after {
+    left: 0;
+  }
+
+  .emotions::before {
+    right: 0;
+  }
+
+  .emotions h3 {
+    font-size: 21px;
+    padding-bottom: 39px;
+  }
+
+  .emotions textarea {
+    width: 608px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .emotions textarea {
+    width: 920px;
+  }
+
+  .emotions::before,
+  .emotions::after {
+    width: 278px;
+    top: 32px;
+  }
 }

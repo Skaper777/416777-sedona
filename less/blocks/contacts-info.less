@@ -1,15 +1,178 @@
 .contacts-info {
+  position: relative;
+  padding-top: 18px;
+  padding-bottom: 29px;
   line-height: 26px;
 }
 
-.contacts-info label {
+.contacts-info::after {
+  content: "";
+  width: 320px;
+  height: 1px;
+  background-color: #eeeeee;
+  position: absolute;
+  bottom: 0;
+  right: -20px;
+}
+
+.contacts-info__legend {
+  font-size: 18px;
+  color: black;
+}
+
+.contacts-info__legend::before,
+.contacts-info__legend::after {
+  display: none;
+}
+
+.contacts-info__label {
+  position: relative;
   display: flex;
   flex-direction: column;
+  padding-top: 20px;
+}
+
+.contacts-info__label:last-child {
+  padding-top: 12px;
+
+  span {
+    padding-bottom: 7px;
+  }
+
+  .contacts-info__icon {
+    top: 45px;
+  }
+}
+
+.contacts-info__label span {
+  padding-left: 22px;
+  padding-bottom: 8px;
+}
+
+.contacts-info__label b {
+  font-weight: normal;
+}
+
+.contacts-info input {
+  padding: 21px;
+  background-color: @bg-input;
+  border: none;
+}
+
+.contacts-info input:hover {
+  background-color: @input-hover;
+}
+
+.contacts-info input:focus {
+  background-color: white;
+}
+
+.contacts-info input::placeholder {
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+}
+
+.contacts-info__icon {
+  position: absolute;
+  top: 54px;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 58px;
+  height: 58px;
+  background-color: #e6e6e6;
+}
+
+@media (min-width: @tablet-width) {
+  .contacts-info {
+    position: relative;
+    padding-top: 34px;
+  }
+
+  .contacts-info::after {
+    display: none;
+  }
+
+  .contacts-info__legend {
+    font-size: 21px;
+}
+
+  .contacts-info__legend::before,
+  .contacts-info__legend::after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 46px;
+    width: 123px;
+    height: 1px;
+    background-color: @bg-gray;
+  }
+
+  .contacts-info__legend::before {
+    left: 0;
+  }
+
+  .contacts-info__legend::after {
+    right: 0;
+  }
+
+  .contacts-info__label {
+    padding-top: 24px;
+  }
+
+  .contacts-info__label:last-child {
+    padding-top: 23px;
+
+    .contacts-info__icon {
+      top: 56px;
+    }
+ }
+
+  .contacts-info__icon {
+    top: 58px;
+ }
 }
 
 @media (min-width: @desktop-width) {
+  .contacts-info {
+    padding-top: 32px;
+  }
+
+  .contacts-info__legend::before,
+  .contacts-info__legend::after {
+    width: 278px;
+    top: 42px;
+  }
+
   .contacts-info label {
     flex-direction: row;
-    width: 480px;
+    margin-top: 50px;
+
+    b {
+    display: none;
+    }
+
+    span {
+      display: block;
+      margin-top: 16px;
+      margin-left: -22px;
+      margin-right: 16px;
+    }
+
+    input {
+      width: 273px;
+    }
+
+    .contacts-info__icon {
+      top: 24px;
+    }
+  }
+
+  .contacts-info__label:last-child {
+    .contacts-info__icon {
+      top: 24px;
+    }
   }
 }

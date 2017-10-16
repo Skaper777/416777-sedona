@@ -1,16 +1,133 @@
 .impression {
+  position: relative;
+  padding-top: 17px;
+  padding-bottom: 17px;
   font-size: 18px;
   line-height: 26px;
   font-weight: bold;
   color: black;
 }
 
+.impression::before {
+  content: "";
+  width: 320px;
+  height: 1px;
+  background-color: #eeeeee;
+  position: absolute;
+  bottom: 0;
+  right: -20px;
+}
+
+.impression__legend {
+  font-size: 18px;
+}
+
+.impression__label {
+  margin-bottom: 8px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  padding-left: 79px;
+  text-transform: none;
+  cursor: pointer;
+}
+
+.impression__label:first-of-type {
+  margin-top: 20px;
+}
+
+.impression__label span {
+  position: relative;
+}
+
+.impression__label span::before {
+  content: "";
+  position: absolute;
+  top: -14px;
+  left: -79px;
+  width: 56px;
+  height: 56px;
+  background-color: @bg-input;
+  border-radius: 50%;
+}
+
+.impression__label span:hover::before {
+  background-color: @input-hover;
+}
+
+.impression__label span:active::before {
+  background-color: @input-down;
+}
+
+.impression__label span:active::after {
+  background-color: #a4a4a4;
+}
+
+.impression__label span::after {
+  content: "";
+  display: none;
+  position: absolute;
+  top: 2px;
+  left: -62px;
+  width: 22px;
+  height: 22px;
+  background-color: black;
+  border-radius: 50%;
+}
+
+.impression input:checked + span::after {
+  display: block;
+}
+
 .impression input {
   position: absolute;
+  opacity: 0;
 }
 
 @media (min-width: @tablet-width) {
   .impression h3 {
+    padding-bottom: 28px;
+    font-size: 21px;
     text-align: left;
+  }
+
+  .impression__label {
+    margin-bottom: 17px;
+    padding-left: 77px;
+  }
+
+  .impression__label:first-of-type {
+    margin-top: 26px;
+  }
+
+  .impression__label span::before {
+    left: -77px;
+    top: -15px;
+  }
+
+  .impression__label span::after {
+    left: -60px;
+  }
+
+  .impression::before {
+    transform: rotate(90deg);
+    width: 292px;
+    left: 178px;
+    top: 168px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .impression h3 {
+    padding-left: 80px;
+  }
+
+  .impression__label {
+    padding-left: 80px;
+  }
+
+  .impression::before {
+    width: 292px;
+    left: 335px;
+    top: 168px;
   }
 }

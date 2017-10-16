@@ -1,9 +1,117 @@
 .introduce {
+  position: relative;
+  padding-top: 19px;
+  padding-bottom: 24px;
   line-height: 26px;
+}
+
+.introduce::after {
+  content: "";
+  width: 320px;
+  height: 1px;
+  background-color: #eeeeee;
+  position: absolute;
+  bottom: 0;
+  right: -20px;
+}
+
+.introduce__legend {
+  font-size: 18px;
+  color: black;
+}
+
+.introduce input {
+  padding: 21px;
+  margin-left: 12px;
+  background-color: @bg-input;
+  border: none;
+}
+
+.introduce input:hover {
+  background-color: @input-hover;
+}
+
+.introduce input:focus {
+  background-color: white;
+}
+
+.introduce input::placeholder {
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+}
+
+.introduce__name {
+  width: 186.5px;
+}
+
+.introduce__surname {
+  width: 149px;
+}
+
+.introduce__patronymic {
+  width: 150px;
+}
+
+.introduce__label {
+  padding-top: 21px;
+}
+
+.introduce__label:last-child input {
+  margin-left: 14px;
 }
 
 @media (min-width: @tablet-width) {
   .introduce h3 {
     text-align: left;
+    padding-left: 59px;
+    padding-bottom: 34px;
+    font-size: 21px;
+  }
+
+  .introduce__label {
+    padding-left: 58px;
+  }
+
+  .introduce input {
+    padding: 20.8px;
+  }
+
+  .introduce__name {
+    width: 173px;
+  }
+
+  .introduce__surname {
+    width: 136px;
+  }
+
+  .introduce__patronymic {
+    width: 136px;
+  }
+
+  .introduce::after {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .introduce h3 {
+    padding-left: 81px;
+  }
+
+  .introduce__label {
+    padding-left: 80px;
+  }
+
+  .introduce__name {
+    width: 307px;
+  }
+
+  .introduce__surname {
+    width: 270px;
+  }
+
+  .introduce__patronymic {
+    width: 270px;
   }
 }

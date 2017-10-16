@@ -1,14 +1,13 @@
 .hotels {
-  min-height: 640px;
-  background-image: url("../../img/bg-map-mobile@1x.jpg");
-  background-repeat: no-repeat;
-  background-position: 100% 99%;
-  background-color: white;
   font-size: 14px;
   line-height: 24px;
   font-weight: 400;
   color: #5d5d5d;
   text-align: center;
+}
+
+.hotels br {
+  display: none;
 }
 
 .hotels__title {
@@ -25,19 +24,76 @@
   width: 280px;
   text-decoration: none;
   margin-top: 35px;
+  margin-bottom: 49px;
   margin-left: auto;
   margin-right: auto;
   padding-top: 16px;
   padding-bottom: 16px;
 }
 
+.hotels__button:hover {
+  background-color: @btn-hover;
+}
+
+.hotels__button:active {
+  background-color: @btn-down;
+  color: @btn-content-down;
+}
+
+.hotels-button:disabled {
+  background-color: @btn-disabled;
+}
+
 .hotels__description {
   padding: 0 20px;
 }
 
+.hotels__map {
+  width: 100%;
+  min-height: 350px;
+  background-color: darkgrey;
+  background: url(../img/bg-map-mobile@1x.jpg) no-repeat 50% 50%;
+}
+
 @media (min-width: @tablet-width) {
-  .hotels {
-    min-height: 670px;
-    background-position: 50% 50%;
+  .hotels__title {
+    padding-top: 56px;
+    padding-bottom: 17px;
+    font-size: 30px;
+  }
+
+  .hotels__description {
+    padding: 0 100px;
+  }
+
+  .hotels__description br {
+    display: inline;
+  }
+
+  .hotels__button {
+    width: 459px;
+    margin-top: 42px;
+    margin-bottom: 58px;
+}
+
+  .hotels__map {
+    background-size: cover;
+    margin-bottom: 36px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .hotels__title {
+    padding-top: 55px;
+    padding-bottom: 18px;
+  }
+
+  .hotels br {
+    display: inline;
+  }
+
+  .hotels__button {
+    margin-top: 46px;
+    margin-bottom: 65px;
   }
 }
