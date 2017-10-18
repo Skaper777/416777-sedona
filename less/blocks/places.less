@@ -39,12 +39,32 @@
   border-radius: 7px;
 }
 
+.places__label::after {
+  content: "";
+  position: absolute;
+  top: 37px;
+  left: 16px;
+  width: 56px;
+  height: 56px;
+  background-image: url("../img/icon-tick.svg");
+  background-repeat: no-repeat;
+  border-radius: 7px;
+  opacity: 0;
+  transition: 0.3s;
+}
+
 .places__label:hover::before {
   background-color: @input-hover;
+  transition: 0.3s;
 }
 
 .places__label:active::before {
   background-color: @input-down;
+  transition: 0.3s;
+  opacity: 0.3;
+}
+
+.places__label:active::after {
   opacity: 0.3;
 }
 
@@ -53,10 +73,12 @@
   opacity: 0;
 }
 
-.places input:checked + label::before {
-  background-image: url("../img/icon-tick.svg");
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
+.places input:checked + label::after {
+  opacity: 1;
+}
+
+.places input:checked + label:active::after {
+  opacity: 0.3;
 }
 
 @media (min-width: @tablet-width) {

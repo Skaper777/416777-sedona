@@ -52,19 +52,21 @@
 
 .impression__label span:hover::before {
   background-color: @input-hover;
+  transition: 0.3s;
 }
 
 .impression__label span:active::before {
   background-color: @input-down;
+  transition: 0.3s;
 }
 
 .impression__label span:active::after {
-  background-color: #a4a4a4;
+  opacity: 0.3;
+  transition: 0.3s;
 }
 
 .impression__label span::after {
   content: "";
-  display: none;
   position: absolute;
   top: 2px;
   left: -62px;
@@ -72,10 +74,17 @@
   height: 22px;
   background-color: black;
   border-radius: 50%;
+  opacity: 0;
+  transition: 0.3s;
 }
 
 .impression input:checked + span::after {
-  display: block;
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.impression input:checked + span:active::after {
+  opacity: 0.3;
 }
 
 .impression input {
