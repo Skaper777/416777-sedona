@@ -71,6 +71,15 @@
     background-color: white;
   }
 
+  .main-nav__link:hover {
+    background-color: white;
+    color: @main-menu-hover;
+  }
+
+  .main-nav__link:active {
+    color: @main-menu-down;
+  }
+
   .main-nav__link {
     color: black;
     padding-top: 14px;
@@ -80,15 +89,14 @@
     &--active {
       color: @menu-active;
     }
-  }
 
-  .main-nav__link:hover {
-    background-color: white;
-    color: @main-menu-hover;
-  }
+    &--active:hover {
+      color: @menu-active-hover;
+    }
 
-  .main-nav__link:active {
-    color: @main-menu-down;
+      &--active:active {
+      color: @menu-active-down;
+    }
   }
 
   .main-nav__wrapper {
