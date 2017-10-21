@@ -8,7 +8,7 @@
   right: 20px;
 }
 
-.left-list__button button {
+.left-list__button-cross {
   width: 23px;
   height: 22px;
   background-color: transparent;
@@ -16,19 +16,19 @@
   cursor: pointer;
 }
 
-.left-list__button svg {
+.left-list__button-icon {
   position: absolute;
   top: 5px;
   left: 0;
   fill: white;
 }
 
-.left-list__item:last-child {
-  border-top: 1px solid #9ac2db;
-}
-
 .left-list__item {
   border-bottom: 1px solid #678fa8;
+
+  &:last-child  {
+  border-top: 1px solid #9ac2db;
+  }
 }
 
 @media (min-width: @tablet-width) {

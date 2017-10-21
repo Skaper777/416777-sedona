@@ -3,26 +3,26 @@
   padding-top: 18px;
   padding-bottom: 29px;
   line-height: 26px;
-}
 
-.contacts-info::after {
-  content: "";
-  width: 320px;
-  height: 1px;
-  background-color: #eeeeee;
-  position: absolute;
-  bottom: 0;
-  right: -20px;
+  &::after {
+    content: "";
+    width: 320px;
+    height: 1px;
+    background-color: #eeeeee;
+    position: absolute;
+    bottom: 0;
+    right: -20px;
+  }
 }
 
 .contacts-info__legend {
   font-size: 18px;
   color: black;
-}
 
-.contacts-info__legend::before,
-.contacts-info__legend::after {
-  display: none;
+  &::after,
+  &::before {
+    display: none;
+  }
 }
 
 .contacts-info__label {
@@ -30,6 +30,15 @@
   display: flex;
   flex-direction: column;
   padding-top: 20px;
+
+  span {
+    padding-left: 22px;
+    padding-bottom: 8px;
+  }
+
+  b {
+    font-weight: normal;
+  }
 }
 
 .contacts-info__label:last-child {
@@ -44,33 +53,24 @@
   }
 }
 
-.contacts-info__label span {
-  padding-left: 22px;
-  padding-bottom: 8px;
-}
-
-.contacts-info__label b {
-  font-weight: normal;
-}
-
 .contacts-info input {
   padding: 21px;
   background-color: @bg-input;
   border: none;
-}
 
-.contacts-info input:hover {
-  background-color: @input-hover;
-}
+  &:hover {
+    background-color: @input-hover;
+  }
 
-.contacts-info input:focus {
-  background-color: white;
-}
+  &:focus {
+    background-color: white;
+  }
 
-.contacts-info input::placeholder {
-  font-size: 16px;
-  font-weight: bold;
-  color: black;
+  &::placeholder {
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+  }
 }
 
 .contacts-info__icon {
@@ -89,33 +89,33 @@
   .contacts-info {
     position: relative;
     padding-top: 34px;
-  }
 
-  .contacts-info::after {
-    display: none;
+    &::after {
+      display: none;
+    }
   }
 
   .contacts-info__legend {
     font-size: 21px;
-  }
 
-  .contacts-info__legend::before,
-  .contacts-info__legend::after {
-    display: block;
-    content: "";
-    position: absolute;
-    top: 46px;
-    width: 123px;
-    height: 1px;
-    background-color: @bg-gray;
-  }
+    &::before,
+    &::after {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 46px;
+      width: 123px;
+      height: 1px;
+      background-color: @bg-gray;
+    }
 
-  .contacts-info__legend::before {
-    left: 0;
-  }
+    &::after {
+      right: 0;
+    }
 
-  .contacts-info__legend::after {
-    right: 0;
+    &::before {
+      left: 0;
+    }
   }
 
   .contacts-info__label {
@@ -138,12 +138,12 @@
 @media (min-width: @desktop-width) {
   .contacts-info {
     padding-top: 32px;
-  }
 
-  .contacts-info__legend::before,
-  .contacts-info__legend::after {
-    width: 278px;
-    top: 42px;
+    &::after,
+    &::before {
+      width: 278px;
+      top: 42px;
+    }
   }
 
   .contacts-info label {
