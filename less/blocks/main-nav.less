@@ -31,15 +31,15 @@
   text-decoration: none;
   color: white;
   text-transform: uppercase;
-}
 
-.main-nav__link:hover {
-  background-color: @btn-hover;
-}
+  &:hover {
+    background-color: @btn-hover;
+  }
 
-.main-nav__link:active {
-  background-color: @btn-down;
-  color: @btn-content-down;
+  &:active {
+    background-color: @btn-down;
+    color: @btn-content-down;
+  }
 }
 
 .main-nav__toggle {
@@ -54,7 +54,7 @@
   cursor: pointer;
 }
 
-.main-nav__toggle svg {
+.main-nav__toggle-icon {
   position: absolute;
   fill: @bg-blue;
   top: 0;
@@ -71,20 +71,20 @@
     background-color: white;
   }
 
-  .main-nav__link:hover {
-    background-color: white;
-    color: @main-menu-hover;
-  }
-
-  .main-nav__link:active {
-    color: @main-menu-down;
-  }
-
   .main-nav__link {
     color: black;
     padding-top: 14px;
     font-size: 14px;
     line-height: 26px;
+
+    &:hover {
+      background-color: white;
+      color: @main-menu-hover;
+    }
+
+    &:active {
+      color: @main-menu-down;
+    }
 
     &--active {
       color: @menu-active;

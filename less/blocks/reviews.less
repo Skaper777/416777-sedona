@@ -6,6 +6,13 @@
   line-height: 24px;
   font-weight: 400;
   color: #5d5d5d;
+
+  h3 {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
 }
 
 .reviews__wrapper {
@@ -26,16 +33,16 @@
   width: 100%;
   text-align: center;
   order: -10;
-}
 
-.reviews__header::after {
-  content: "";
-  width: 320px;
-  height: 1px;
-  background-color: #eeeeee;
-  position: absolute;
-  bottom: 0;
-  right: -20px;
+  &::after {
+    content: "";
+    width: 320px;
+    height: 1px;
+    background-color: #eeeeee;
+    position: absolute;
+    bottom: 0;
+    right: -20px;
+  }
 }
 
 .reviews__title {
@@ -62,13 +69,6 @@
   border: none;
 }
 
-.reviews h3 {
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  text-align: center;
-}
-
 .reviews__button {
   display: block;
   width: 100%;
@@ -78,15 +78,15 @@
   font-family: "PTSans", "Arial", sans-serif;
   font-size: 21px;
   text-transform: uppercase;
-}
 
-.reviews__button:hover {
-  background-color: @btn-hover;
-}
+  &:hover {
+    background-color: @btn-hover;
+  }
 
-.reviews__button:active {
-  background-color: @btn-down;
-  color: @btn-content-down;
+  &:active {
+    background-color: @btn-down;
+    color: @btn-content-down;
+  }
 }
 
 .reviews__required {
@@ -106,6 +106,10 @@
   .reviews__header {
     padding-top: 73px;
     padding-bottom: 43px;
+
+    &::after {
+      display: none;
+    }
   }
 
   .reviews__title {
@@ -115,10 +119,6 @@
   .reviews__intro {
     padding: 0 105px;
     padding-top: 12px;
-  }
-
-  .reviews__header::after {
-    display: none;
   }
 
   .reviews__impression {
