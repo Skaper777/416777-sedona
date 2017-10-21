@@ -3,16 +3,16 @@
   padding-top: 19px;
   padding-bottom: 24px;
   line-height: 26px;
-}
 
-.introduce::after {
-  content: "";
-  width: 320px;
-  height: 1px;
-  background-color: #eeeeee;
-  position: absolute;
-  bottom: 0;
-  right: -20px;
+  &::after {
+    content: "";
+    width: 320px;
+    height: 1px;
+    background-color: #eeeeee;
+    position: absolute;
+    bottom: 0;
+    right: -20px;
+  }
 }
 
 .introduce__legend {
@@ -25,20 +25,20 @@
   margin-left: 12px;
   background-color: @bg-input;
   border: none;
-}
 
-.introduce input:hover {
-  background-color: @input-hover;
-}
+  &:hover {
+    background-color: @input-hover;
+  }
 
-.introduce input:focus {
-  background-color: white;
-}
+  &:focus {
+    background-color: white;
+  }
 
-.introduce input::placeholder {
-  font-size: 16px;
-  font-weight: bold;
-  color: black;
+  &::placeholder {
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+  }
 }
 
 .introduce__name {
@@ -55,10 +55,12 @@
 
 .introduce__label {
   padding-top: 21px;
-}
 
-.introduce__label:last-child input {
-  margin-left: 14px;
+  &:last-child {
+    input {
+      margin-left: 14px;
+    }
+  }
 }
 
 @media (min-width: @tablet-width) {

@@ -12,22 +12,22 @@
   height: 48px;
   font-size: 0;
   background-color: @bg-blue;
+
+  &:hover {
+    background-color: @btn-hover;
+  }
+
+  &:active {
+    background-color: @btn-down;
+
+    .social__icon {
+      fill: #88b6d1;
+    }
+  }
 }
 
-.social__link:hover {
-  background-color: @btn-hover;
-}
-
-.social__link:active {
-  background-color: @btn-down;
-}
-
-.social__link svg {
+.social__icon {
   fill: white;
-}
-
-.social__link:active svg {
-  fill: #88b6d1;
 }
 
 @media (min-width: @tablet-width) {
