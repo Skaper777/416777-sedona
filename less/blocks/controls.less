@@ -25,40 +25,65 @@
 }
 
 .controls__buttons {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   min-width: 280px;
   padding: 22px 0;
   background-color: @bg-input;
+}
+
+.controls__replay-button,
+.controls__subtitles-button,
+.controls__fullscreen-button {
+  position: relative;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 
   svg {
+    position: absolute;
     fill: @controls-btn;
+    left: 0;
+    top: 0;
+  }
 
-    &:hover {
+  &:hover {
+    svg {
       fill: @controls-hover;
     }
+  }
 
-    &:active {
-      opacity: 0.3;
+  &:active {
+    svg {
+      fill: @controls-down;
     }
   }
 }
 
-.controls__replay {
-  margin-left: 25px;
+.controls__replay-button {
+  margin-bottom: 1px;
+  margin-left: 24px;
+  width: 20px;
+  height: 21px;
 }
 
-.controls__subtitles {
-  margin-left: 132px;
+.controls__subtitles-button {
+  margin-top: 1px;
+  margin-left: 131px;
+  width: 32px;
+  height: 20px;
 }
 
-.controls__fullscreen {
-  margin-left: 33px;
+.controls__fullscreen-button {
+  margin-top: 1px;
+  margin-left: 30px;
+  width: 20px;
+  height: 20px;
 }
 
 @media (min-width: @tablet-width) {
   .controls__buttons {
-    position: relative;
     width: 649.5px;
     padding: 36px 0;
     margin-top: -99px;
@@ -69,11 +94,11 @@
     }
   }
 
-  .controls__replay {
-    margin-left: 36px;
+  .controls__replay-button {
+    margin-left: 35px;
   }
 
-  .controls__subtitles {
+  .controls__subtitles-button {
     margin-left: 470px;
   }
 
@@ -99,9 +124,10 @@
     width: 800px;
   }
 
-  .controls__subtitles {
+  .controls__subtitles-button {
     margin-left: 620px;
   }
+
 
   .controls__stripe {
     width: 540px;

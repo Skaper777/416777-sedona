@@ -226,7 +226,7 @@
           </header>
           <ul class="media__list photos">
             <li class="photos__item">
-              <a class="photos__image" href="#" title="Народные просторы">
+              <a class="photos__image" href="img/photo-sunset-desktop@1x.jpg" title="Народные просторы">
                 <picture>
                   <source media="(min-width: 1200px)" type="image/webp" srcset="img/photo-sunset-desktop@1x.webp 1x, img/photo-sunset-desktop@2x.webp 2x">
                   <source media="(min-width: 768px)" type="image/webp" srcset="img/photo-sunset-tablet@1x.webp 1x, img/photo-sunset-tablet@2x.webp 2x">
@@ -251,7 +251,7 @@
               </div>
             </li>
             <li class="photos__item">
-              <a class="photos__image" href="#" title="Местная растительность">
+              <a class="photos__image" href="img/photo-cactus-desktop@1x.jpg" title="Местная растительность">
                 <picture>
                   <source media="(min-width: 1200px)" type="image/webp" srcset="img/photo-cactus-desktop@1x.webp 1x, img/photo-cactus-desktop@2x.webp 2x">
                   <source media="(min-width: 768px)" type="image/webp" srcset="img/photo-cactus-tablet@1x.webp 1x, img/photo-cactus-tablet@2x.webp 2x">
@@ -276,7 +276,7 @@
               </div>
             </li>
             <li class="photos__item">
-              <a class="photos__image" href="#" title="Дорога на север">
+              <a class="photos__image" href="img/photo-roads-desktop@1x.jpg" title="Дорога на север">
                 <picture>
                   <source media="(min-width: 1200px)" type="image/webp" srcset="img/photo-roads-desktop@1x.webp 1x, img/photo-roads-desktop@2x.webp 2x">
                   <source media="(min-width: 768px)" type="image/webp" srcset="img/photo-roads-tablet@1x.webp 1x, img/photo-roads-tablet@2x.webp 2x">
@@ -301,7 +301,7 @@
               </div>
             </li>
             <li class="photos__item">
-              <a class="photos__image" href="#" title="Мост дьявола">
+              <a class="photos__image" href="img/photo-bridge-desktop@1x.jpg" title="Мост дьявола">
                 <picture>
                   <source media="(min-width: 1200px)" type="image/webp" srcset="img/photo-bridge-desktop@1x.webp 1x, img/photo-bridge-desktop@2x.webp 2x">
                   <source media="(min-width: 768px)" type="image/webp" srcset="img/photo-bridge-tablet@1x.webp 1x, img/photo-bridge-tablet@2x.webp 2x">
@@ -344,15 +344,21 @@
                 <div class="controls__ball"></div>
               </div>
               <div class="controls__buttons">
-                <svg class="controls__replay" width="16px" height="20px">
-                  <use xlink:href="#replay"></use>
-                </svg>
-                <svg class="controls__subtitles" width="32px" height="20px">
-                  <use xlink:href="#subtitles"></use>
-                </svg>
-                <svg class="controls__fullscreen" width="20px" height="20px">
-                  <use xlink:href="#fullscreen"></use>
-                </svg>
+                <button class="controls__replay-button" type="button" title="Обновить">
+                  <svg class="controls__replay-icon" width="16px" height="20px">
+                    <use xlink:href="#replay"></use>
+                  </svg>
+                </button>
+                <button class="controls__subtitles-button" type="button" title="Субтитры">
+                  <svg class="controls__subtitles" width="32px" height="20px">
+                    <use xlink:href="#subtitles"></use>
+                  </svg>
+                </button>
+                <button class="controls__fullscreen-button" type="button" title="На весь экран">
+                  <svg class="controls__fullscreen" width="20px" height="20px">
+                    <use xlink:href="#fullscreen"></use>
+                  </svg>
+                </button>
               </div>
             </section>
           </footer>
