@@ -39,7 +39,7 @@ gulp.task("js", function() {
     .pipe(gulp.dest("build/js"))
 })
 
-gulp.task("serve", ["style"], function() {
+gulp.task("serve", function() {
   server.init({
     server: "build/",
     notify: false,
@@ -64,7 +64,7 @@ gulp.task("images", function () {
 
 gulp.task("webp", function() {
   return gulp.src("build/img/**/*.{png,jpg}")
-    .pipe(webp({quality: 70}))
+    .pipe(webp({quality: 90}))
     .pipe(gulp.dest("build/img"));
 });
 
@@ -97,7 +97,7 @@ gulp.task("copy", function () {
 });
 
 gulp.task("build", function(done) {
-  run("clean", "copy", "images", "webp", "style", "js", "sprite", "html", done);
+  run("clean","copy","images","webp","style","js", "sprite", "html", done);
 });
 
 gulp.task("clean", function() {
