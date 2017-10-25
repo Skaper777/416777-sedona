@@ -13,6 +13,8 @@
   <link href="css/style.css" rel="stylesheet">
 </head>
 
+<body class="page">
+
   <svg style="display: none">
     <symbol viewBox="0 0 22.199 22.199" id="button-cross">
       <polygon points="22.199,2.804 19.396,0 11.1,8.297 2.804,0 0,2.803 8.297,11.1 0,19.396 2.803,22.199 11.1,13.902 19.396,22.199 22.199,19.396 13.903,11.1 "/>
@@ -147,10 +149,10 @@
       </g>
     </symbol>
     <symbol viewBox="0 0 18 18" id="phone">
-      <g id="Page-1">
+      <g>
         <g id="Icons-Communication" transform="translate(-85.000000, -126.000000)">
-          <g id="phone" transform="translate(85.000000, 126.000000)">
-            <path id="Shape" fill="#010101" d="M3.6,7.8C5,10.6,7.4,12.9,10.2,14.4l2.2-2.2c0.3-0.3,0.699-0.4,1-0.2c1.1,0.4,2.3,0.6,3.6,0.6 c0.6,0,1,0.4,1,1V17c0,0.6-0.4,1-1,1C7.6,18,0,10.4,0,1c0-0.6,0.4-1,1-1h3.5c0.6,0,1,0.4,1,1c0,1.2,0.2,2.4,0.6,3.6 c0.1,0.3,0,0.7-0.2,1L3.6,7.8L3.6,7.8z"/>
+          <g transform="translate(85.000000, 126.000000)">
+            <path fill="#010101" d="M3.6,7.8C5,10.6,7.4,12.9,10.2,14.4l2.2-2.2c0.3-0.3,0.699-0.4,1-0.2c1.1,0.4,2.3,0.6,3.6,0.6 c0.6,0,1,0.4,1,1V17c0,0.6-0.4,1-1,1C7.6,18,0,10.4,0,1c0-0.6,0.4-1,1-1h3.5c0.6,0,1,0.4,1,1c0,1.2,0.2,2.4,0.6,3.6 c0.1,0.3,0,0.7-0.2,1L3.6,7.8L3.6,7.8z"/>
           </g>
         </g>
       </g>
@@ -159,8 +161,6 @@
       <path d="M8,10c-0.266,0-0.5-0.094-1-0.336L0,6v7c0,0.55,0.45,1,1,1h14c0.55,0,1-0.45,1-1V6L9,9.664C8.5,9.906,8.266,10,8,10z M15,2 H1C0.45,2,0,2.45,0,3v0.758l8,4.205l8-4.205V3C16,2.45,15.55,2,15,2z"/>
     </symbol>
   </svg>
-
-<body class="page">
 
   <div class="page-container">
 
@@ -194,7 +194,7 @@
             <picture>
               <source media="(min-width: 1200px)" srcset="./img/logo-sedona-desktop.svg">
               <source media="(min-width: 768px)" srcset="./img/logo-sedona-tablet.svg">
-              <img class="main-header__logo-image" src="./img/logo-sedona-mobile.svg" alt="Логотип Седоны">
+              <img class="page-header__logo-image" src="./img/logo-sedona-mobile.svg" alt="Логотип Седоны">
             </picture>
           </a>
           <button class="main-nav__toggle" type="button" title="Открыть меню">
@@ -211,7 +211,7 @@
         <picture>
           <source media="(min-width: 1200px)" srcset="./img/bg-intro-triangle-desktop.svg">
           <source media="(min-width: 768px)" srcset="./img/bg-intro-triangle-tablet.svg">
-          <img class="page-header__triangles" src="./img/bg-intro-triangle-mobile.svg">
+          <img class="page-header__triangles" src="./img/bg-intro-triangle-mobile.svg" alt="треугольники">
         </picture>
       </div>
     </header>
@@ -226,7 +226,7 @@
           </header>
           <ul class="media__list photos">
             <li class="photos__item">
-              <a class="photos__image" href="#" title="Народные просторы">
+              <a class="photos__image" href="img/photo-sunset-desktop@1x.jpg" title="Народные просторы">
                 <picture>
                   <source media="(min-width: 1200px)" type="image/webp" srcset="img/photo-sunset-desktop@1x.webp 1x, img/photo-sunset-desktop@2x.webp 2x">
                   <source media="(min-width: 768px)" type="image/webp" srcset="img/photo-sunset-tablet@1x.webp 1x, img/photo-sunset-tablet@2x.webp 2x">
@@ -234,7 +234,6 @@
 
                   <source media="(min-width: 1200px)" srcset="img/photo-sunset-desktop@1x.jpg 1x, img/photo-sunset-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)" srcset="img/photo-sunset-tablet@1x.jpg 1x, img/photo-sunset-tablet@2x.jpg 2x">
-                  <source>
                   <img src="img/photo-sunset-mobile@1x.jpg" srcset="img/photo-sunset-mobile@2x.jpg 2x" alt="Народные просторы">
                 </picture>
               </a>
@@ -252,7 +251,7 @@
               </div>
             </li>
             <li class="photos__item">
-              <a class="photos__image" href="#" title="Местная растительность">
+              <a class="photos__image" href="img/photo-cactus-desktop@1x.jpg" title="Местная растительность">
                 <picture>
                   <source media="(min-width: 1200px)" type="image/webp" srcset="img/photo-cactus-desktop@1x.webp 1x, img/photo-cactus-desktop@2x.webp 2x">
                   <source media="(min-width: 768px)" type="image/webp" srcset="img/photo-cactus-tablet@1x.webp 1x, img/photo-cactus-tablet@2x.webp 2x">
@@ -277,7 +276,7 @@
               </div>
             </li>
             <li class="photos__item">
-              <a class="photos__image" href="#" title="Дорога на север">
+              <a class="photos__image" href="img/photo-roads-desktop@1x.jpg" title="Дорога на север">
                 <picture>
                   <source media="(min-width: 1200px)" type="image/webp" srcset="img/photo-roads-desktop@1x.webp 1x, img/photo-roads-desktop@2x.webp 2x">
                   <source media="(min-width: 768px)" type="image/webp" srcset="img/photo-roads-tablet@1x.webp 1x, img/photo-roads-tablet@2x.webp 2x">
@@ -302,7 +301,7 @@
               </div>
             </li>
             <li class="photos__item">
-              <a class="photos__image" href="#" title="Мост дьявола">
+              <a class="photos__image" href="img/photo-bridge-desktop@1x.jpg" title="Мост дьявола">
                 <picture>
                   <source media="(min-width: 1200px)" type="image/webp" srcset="img/photo-bridge-desktop@1x.webp 1x, img/photo-bridge-desktop@2x.webp 2x">
                   <source media="(min-width: 768px)" type="image/webp" srcset="img/photo-bridge-tablet@1x.webp 1x, img/photo-bridge-tablet@2x.webp 2x">
@@ -345,15 +344,21 @@
                 <div class="controls__ball"></div>
               </div>
               <div class="controls__buttons">
-                <svg class="controls__replay" width="16px" height="20px">
-                  <use xlink:href="#replay"></use>
-                </svg>
-                <svg class="controls__subtitles" width="32px" height="20px">
-                  <use xlink:href="#subtitles"></use>
-                </svg>
-                <svg class="controls__fullscreen" width="20px" height="20px">
-                  <use xlink:href="#fullscreen"></use>
-                </svg>
+                <button class="controls__replay-button" type="button" title="Обновить">
+                  <svg class="controls__replay-icon" width="16px" height="20px">
+                    <use xlink:href="#replay"></use>
+                  </svg>
+                </button>
+                <button class="controls__subtitles-button" type="button" title="Субтитры">
+                  <svg class="controls__subtitles" width="32px" height="20px">
+                    <use xlink:href="#subtitles"></use>
+                  </svg>
+                </button>
+                <button class="controls__fullscreen-button" type="button" title="На весь экран">
+                  <svg class="controls__fullscreen" width="20px" height="20px">
+                    <use xlink:href="#fullscreen"></use>
+                  </svg>
+                </button>
               </div>
             </section>
           </footer>
