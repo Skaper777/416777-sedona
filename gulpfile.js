@@ -17,7 +17,6 @@ var run = require("run-sequence");
 var del = require("del");
 var jsMinify = require("gulp-uglify");
 
-
 gulp.task("style", function() {
   gulp.src("less/style.less")
     .pipe(plumber())
@@ -39,7 +38,7 @@ gulp.task("js", function() {
     .pipe(gulp.dest("build/js"))
 })
 
-gulp.task("serve", ["style"], function() {
+gulp.task("serve", function() {
   server.init({
     server: "build/",
     notify: false,
@@ -49,7 +48,7 @@ gulp.task("serve", ["style"], function() {
   });
 
   gulp.watch("less/**/*.less", ["style"]);
-  gulp.watch("*.html",["html"]);
+  gulp.watch("*.html", ["html"]);
 });
 
 gulp.task("images", function () {
